@@ -1,0 +1,6 @@
+x=int(input())
+y=int(input())
+a=int(y//x)
+b=int(y%x)
+print(a)
+print(b)

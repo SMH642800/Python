@@ -1,0 +1,10 @@
+A=int(input())
+B=int(input())
+N=int(input())
+dollars=A*N
+cents=B*N
+a=cents/100
+b=cents%100
+total_dollars=dollars+int(a)
+total_cents=b
+print(total_dollars,total_cents,sep=' ')

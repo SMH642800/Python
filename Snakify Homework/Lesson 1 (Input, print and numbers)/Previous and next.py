@@ -1,0 +1,5 @@
+x=int(input())
+p=str(x-1)
+n=str(x+1)
+print('The next number for the number '+str(x)+' is '+n+'.')
+print('The previous number for the number '+str(x)+' is '+p+'.')
