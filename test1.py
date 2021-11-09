@@ -1,9 +1,4 @@
-while True:  
-  try:  
-    x=input().split()
-    list_A=[int(i) for i in x]
-    for i in list_A[:len(list_A)-1:2]:
-        print(i, end=' ')
-    print(list_A[len(list_A)-1])
-  except (EOFError):  
-    break  
+n = int(input())
+for i in range(n):
+    a, b = [[int(e) for e in input().split()] for i in range(n)]
+print(a,b)
