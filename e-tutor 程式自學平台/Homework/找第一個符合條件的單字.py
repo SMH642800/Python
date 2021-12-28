@@ -1,5 +1,5 @@
 import re
-sentence_rule = re.compile(r'\d\w*a+\w*\d')   #以數字為首尾，且其中包含至少一個a的所有單字
+sentence_rule = re.compile(r'\d\w*a\w*\d')   #以數字為首尾，且其中包含至少一個a的所有單字
 
 
 def compact_rule(sentence: str):
