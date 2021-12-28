@@ -1,3 +1,7 @@
+def sorted_set_of_point(set_of_point: list):
+    return sorted(set_of_point, key=lambda x: (x[2], x[0]), reverse=True)  # 距離由大至小排序，若距離相同，x座標較大者先
+
+
 def sorted_input_date(numbers_of_lines: int, ans: list):
     for i in range(numbers_of_lines):      # 共有N行輸入
         set_of_point = []                  # 建立一個list來儲存所有point的資料集合
@@ -14,7 +18,7 @@ def sorted_input_date(numbers_of_lines: int, ans: list):
             point[1] = y
             point[2] = distance
             set_of_point.append(point)      # 把 point [x, y, 距離第一個point的距離] 儲存至set of point裡
-        sorted_ans = sorted(set_of_point, key=lambda x: (x[2], x[0]), reverse = True)  # 距離由大至小排序，若距離相同，x座標較大者先
+        sorted_ans = sorted_set_of_point(set_of_point)
         ans.append(sorted_ans)      # 把每行的所有已排序好的point資料儲存至ans裡
     return ans      # 回傳以排序好的ans
 
