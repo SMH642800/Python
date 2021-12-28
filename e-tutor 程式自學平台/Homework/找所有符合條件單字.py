@@ -1,5 +1,5 @@
 import re
-sentence_rule = re.compile(r'[aA]wd+w')   #以A或a為首，且後面字串中包含有至少一個數字，的所有單字
+sentence_rule = re.compile(r'[aA]\w*\d+\w*')   #以A或a為首，且後面字串中包含有至少一個數字，的所有單字
 
 
 def match(sentence str)
