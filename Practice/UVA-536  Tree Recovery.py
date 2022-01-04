@@ -7,7 +7,6 @@
 # Method 1
 def postorder(preorder: str, inorder: str, pre: int, in_low: int, in_high: int):
     if in_low >= in_high:
-        print(pre)
         return pre
 
     # inorder : MLR, preorder : LMR, inorder[i] == preorder[preI] --> find the mid variable
@@ -16,10 +15,9 @@ def postorder(preorder: str, inorder: str, pre: int, in_low: int, in_high: int):
         if inorder[i] == preorder[pre]:
             pre = postorder(preorder, inorder, pre + 1, in_low, i)   # left subtree
             pre = postorder(preorder, inorder, pre, i + 1, in_high)  # right subtree
-            print(str(inorder[i]))
+            print(str(inorder[i]), end='')
             break
 
-    print(pre)
     return pre
 
 
